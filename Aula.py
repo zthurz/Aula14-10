@@ -1,4 +1,10 @@
 Nome = input("Qual é o seu nome completo: ")
+while True:
+    if Nome.strip == "":
+         print("Voce deixou vazio")
+    else:
+         break
+    Nome = input("Qual é o seu nome")
 
 
 

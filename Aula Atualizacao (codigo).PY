@@ -1,30 +1,41 @@
+# Verificação de Voto - Exemplo Simples
 
-Nome = input("Qual é o seu nome completo: ")
+# F-STRING (f""): Insere variáveis no texto usando {}
+# Exemplo: print(f"Olá {nome}") em vez de print("Olá " + nome)
+
+# Entrada do nome e idade pelo usuário
+nome = input("Qual é o seu nome: ")
+
+# Verificar se o nome está vazio e contém apenas letras
 while True:
-    if Nome.strip == "":
-         print("Voce deixou vazio")
+    if nome.strip() == "":
+        print("Esse espaço nao pode ficar em branco")
+    elif not nome.replace(" ", "").isalpha():
+        print("Deve conter apenas letras")
     else:
-         break
-    Nome = input("Qual é o seu nome")
+        break
+    nome = input("Digite seu nome: ")
 
+# Entrada da idade
+while True:
+    try:
+        idade = int(input("Digite sua idade: "))
+        break
+    except ValueError:
+        print("Digite apenas números para a idade!")
 
-ssssss
+# Verificação simples
+if idade >= 16:
+    resultado = f"{nome}, você PODE VOTAR"
+else:
+    resultado = f"{nome}, você NÃO PODE VOTAR"
 
+print(resultado)
 
-Idade = int(input("Qual é a sua idade: "))
+# Perguntar se quer imprimir os dados
+imprimir = input("Deseja imprimir os dados? (s/n): ")
 
-Informacoes = input("Voce quer que eu te mostre suas informaçoes? (Responda sim ou nao) ")
-if Informacoes == "nao":
-        print("Ok, obrigado por atualizar seu cadastro")
-
-elif Informacoes == "sim":
-    
-
-    print("Certinho, obrgiado por atualizar seus dados", "\n","\n")
-
-    print("O seu nome é", Nome, "\n")
-
-    print("Voce tem", Idade, "Anos", "\n")
-
-
-######aaa
+if imprimir.lower() in ['s', 'sim']:
+    print(f"\nNome: {nome}")
+    print(f"Idade: {idade}")
+    print(f"Status: {resultado}")

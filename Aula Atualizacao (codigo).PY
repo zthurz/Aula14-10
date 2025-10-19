@@ -7,8 +7,6 @@ while True:
          break
     Nome = input("Qual é o seu nome")
 
-###
-
 
 
 

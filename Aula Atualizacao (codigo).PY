@@ -8,7 +8,7 @@ while True:
     Nome = input("Qual é o seu nome")
 
 
-
+ssssss
 
 
 Idade = int(input("Qual é a sua idade: "))
@@ -25,3 +25,6 @@ elif Informacoes == "sim":
     print("O seu nome é", Nome, "\n")
 
     print("Voce tem", Idade, "Anos", "\n")
+
+
+######aaa
